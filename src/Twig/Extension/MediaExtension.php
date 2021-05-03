@@ -146,11 +146,7 @@ class MediaExtension extends AbstractExtension
      */
     public function render($template, array $parameters = [])
     {
-        if (!isset($this->resources[$template])) {
-            $this->resources[$template] = $this->environment->loadTemplate($template);
-        }
-
-        return $this->resources[$template]->render($parameters);
+        return $this->environment->render($template, $parameters);
     }
 
     /**
