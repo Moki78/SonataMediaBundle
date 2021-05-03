@@ -25,7 +25,7 @@ use Twig\Extension\AbstractExtension;
 /**
  * @final since sonata-project/media-bundle 3.21.0
  */
-class MediaExtension extends AbstractExtension
+class MediaExtension extends AbstractExtension implements
 {
     /**
      * @var Pool
@@ -47,10 +47,11 @@ class MediaExtension extends AbstractExtension
      */
     protected $environment;
 
-    public function __construct(Pool $mediaService, ManagerInterface $mediaManager)
+    public function __construct(Pool $mediaService, ManagerInterface $mediaManager, Environment $environment)
     {
         $this->mediaService = $mediaService;
         $this->mediaManager = $mediaManager;
+        $this->environment = $environment;
     }
 
     public function getTokenParsers()
