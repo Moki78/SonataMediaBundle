@@ -25,7 +25,7 @@ use Twig\Extension\AbstractExtension;
 /**
  * @final since sonata-project/media-bundle 3.21.0
  */
-class MediaExtension extends AbstractExtension implements
+class MediaExtension extends AbstractExtension
 {
     /**
      * @var Pool
